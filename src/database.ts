@@ -2,7 +2,7 @@ import mongoose, { ConnectOptions } from "mongoose";
 import config from "./config/config";
 
 /**
- * ! Doesn't work
+ * ! Deprecated
  */
 // const dbOptions: ConnectionOptions = {
 //   useNewUrlParser: true,
@@ -10,10 +10,7 @@ import config from "./config/config";
 // };
 // mongoose.connect(config.DB.URI, dbOptions);
 
-mongoose.connect(config.DB.URI, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-} as ConnectOptions);
+mongoose.connect(config.DB.URI);
 
 const connection = mongoose.connection;
 
